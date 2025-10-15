@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de cliente</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="bg-gray-1000">
+
+    <section class="mx-auto max-w-7xl min-h-dvh p-4">
+        <!-- formulário -->
+        <form action="" name="enderecoForm" id="enderecoForm" method="get" class="p-8 space-y-6">
+            <h2 class="text-2xl font-bold text-gray-300 mb-4">Buscar endereço</h2>
+
+            <!-- campos Nome, CEP, etc -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div>
+                    <label for="" class="text-gray-300 mb-1 block">Cliente</label>
+                    <input type="text" name="nome" id="nome" placeholder="Digite o nome do cliente" class="w-full border border-gray-300 rounded px-3 py-2
+                placeholder:text-gray-600 text-gray-300">
+                </div>
+                <div>
+                    <label for="" class="text-gray-300 mb-1 block">CEP</label>
+                    <div class="flex gap-2">
+                        <input type="text" name="cep" id="cep" placeholder="Digite o cep" class="w-full border border-gray-300 rounded px-3 py-2
+                    placeholder:text-gray-600 text-gray-300">
+                        <button id="buscarCep" class="bg-blue-600 text-gray-300 font-semibold px-4 py-2
+                    rounded hover:bg-blue-800">Buscar</button>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="" class="text-gray-300 mb-1 block">Logradouro</label>
+                    <input type="text" name="logradouro" id="logradouro" placeholder="Apartamento, Rua, Estrada..."
+                        class="w-full border border-gray-300 rounded px-3 py-2
+                placeholder:text-gray-600 text-gray-300">
+                </div>
+
+                <div>
+                    <label for="" class="text-gray-300 mb-1 block">Número</label>
+                    <input type="text" name="numero" id="numero" placeholder="Numero 9999" class="w-full border border-gray-300 rounded px-3 py-2
+                placeholder:text-gray-600 text-gray-300">
+                </div>
+
+                <div>
+                    <label for="" class="text-gray-300 mb-1 block">Complemento</label>
+                    <input type="text" name="complemento" id="complemento" placeholder="Apto. 9999" class="w-full border border-gray-300 rounded px-3 py-2
+                placeholder:text-gray-600 text-gray-300">
+                </div>
+
+                <div>
+                    <label for="" class="text-gray-300 mb-1 block">Bairro</label>
+                    <input type="text" name="bairro" id="bairro" placeholder="Bairro" class="w-full border border-gray-300 rounded px-3 py-2
+                placeholder:text-gray-600 text-gray-300">
+                </div>
+
+                <div>
+                    <label for="" class="text-gray-300 mb-1 block">Cidade</label>
+                    <input type="text" name="cidade" id="cidade" placeholder="Cidade" class="w-full border border-gray-300 rounded px-3 py-2
+                placeholder:text-gray-600 text-gray-300">
+                </div>
+
+                <div>
+                    <label for="" class="text-gray-300 mb-1 block">Estado</label>
+                    <input type="text" name="uf" id="uf" placeholder="Estado" class="w-full border border-gray-300 rounded px-3 py-2
+                placeholder:text-gray-600 text-gray-300">
+                </div>
+            </div>
+            <div class="mt-4 flex justify-end gap-4">
+                <button type="button" id="mostrarDados" class="bg-gray-500 text-gray-300 font-semibold px-4 py-2
+                    rounded hover:bg-gray-800">
+                    Mostrar Dados</button>
+
+                <button type="submit" id="salvarDados" class="bg-blue-600 text-gray-300 font-semibold px-4 py-2
+                    rounded hover:bg-blue-800">
+                    Salvar Dados</button>
+            </div>
+        </form>
+
+        <!-- cards para os cadastros realizados -->
+         <div id="cardsContainer" class="mt-6 grid grid-cols-1 sm:grid-cols-2
+         lg:grid-cols-3 gap-6"></div>
+
+         <!-- modal para todas as mensagens -->
+          <div id="alertModal"
+            class="hidden opacity-0 fixed inset-0 bg-gray-700 items-center justify-center
+            transition-opacity duration-300">
+            <div class="text-center border-2 border-blue-600 p-4 rounded-lg">
+                <h3 class="text-3xl text-gray-300 font-semibold">
+                    Atenção !!!
+                </h3>          
+                <p id="alertMessage" class="text-gray-300 mb-4 py-3 font-medium">
+                </p>      
+                <button id="fecharModal"
+                class="bg-blue-600 hover:bg-blue-700 text-gray-100 px-4 py-2
+                rounded-lg">Clique para voltar</button>
+            </div>
+          </div>
+    </section>
+
+    <!-- Chamada da main.js - ela será um modulo e fará a chamada das funções e dos arquivos js.
+     Não teremos nenhuma outra chamada de arquivo js por script, apenas importação das funções -->
+
+     <script type="module" src="./js/main.js"></script>
+
+</body>
+
+</html>
