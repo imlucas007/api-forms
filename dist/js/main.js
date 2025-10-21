@@ -1,4 +1,5 @@
 // Importação das funções
+import { buscarCep } from "./buscarCep.js";
 import { mostrarModal, aplicarMascaraCep } from "./utils.js";
 
 // Pegando os elementos básicos do DOM
@@ -9,3 +10,8 @@ const mostrarDados = document.querySelector('#mostrarDados');
 
 // Chamar a função de aplicar máscara
 aplicarMascaraCep(cepInput);
+
+// Eventos 
+buscarCepBtn.addEventListener('click', () => {
+    buscarCep();
+})

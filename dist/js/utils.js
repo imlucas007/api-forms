@@ -54,7 +54,7 @@ export function aplicarMascaraCep (inputElement) {
   // Como é uma entrada, essa função para cada número digitado 
   inputElement.addEventListener('input',(e) => {
     // Vamos usar o parametro (e) como traget ==> cada um dos números digitados
-    let value = e.target.replace(/\D/g, '');
+    let value = e.target.value.replace(/\D/g, '');
 
     if (value.length > 5){
       value = value.slice(0, 5) + '-' + value.slice(5, 8);
