@@ -1,5 +1,6 @@
 // Importação das funções
 import { buscarCep } from "./buscarCep.js";
+import { salvarDados } from "./salvarDados.js";
 import { mostrarModal, aplicarMascaraCep } from "./utils.js";
 
 // Pegando os elementos básicos do DOM
@@ -14,4 +15,9 @@ aplicarMascaraCep(cepInput);
 // Eventos 
 buscarCepBtn.addEventListener('click', () => {
     buscarCep();
-})
+});
+
+// Chamar a função salvarDados
+enderecoForm.addEventListener('submit', (event) => {
+    salvarDados(event);
+});
